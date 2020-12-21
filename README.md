@@ -39,7 +39,7 @@ $ touch main.tf
 
 Paste the following configuration into ```main.tf``` and save it. Make sure you update the nfs_server/nfs_server_path values to match your NFS server. You can change some of the other values defined in variables.tf too.
 
-```
+```hcl
 module "nfs-client-provisioner" {
   source = "github.com/sculley/terraform-nfs-client-provisioner"
 
