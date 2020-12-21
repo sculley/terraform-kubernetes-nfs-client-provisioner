@@ -43,7 +43,7 @@ Paste the following configuration into ```main.tf``` and save it. Make sure you 
 module "nfs-client-provisioner" {
   source = "github.com/sculley/terraform-nfs-client-provisioner"
 
-  namespace        = "nfs-client-provisioner"
+  namespace        = "nfs_client_provisioner"
   create_namespace = true
   replica_count    = 2
   nfs_server       = "192.168.122.1"
