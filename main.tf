@@ -1,4 +1,4 @@
-resource "helm_release" "nfs-client-provisioner" {
+resource "helm_release" "nfs_client_provisioner" {
   name       = var.helm_release_name
   repository = var.helm_repository_url
   chart      = var.helm_chart_name
