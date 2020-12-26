@@ -1,4 +1,4 @@
-# terraform-nfs-client-provisioner
+# terraform-kubernetes-nfs-client-provisioner
 Terraform module which deploys nfs-client-provisioner to a Kubernetes cluster
 
 ## Description
@@ -41,7 +41,7 @@ Paste the following configuration into ```main.tf``` and save it. Make sure you 
 
 ```hcl
 module "nfs-client-provisioner" {
-  source = "github.com/sculley/terraform-nfs-client-provisioner"
+  source = "github.com/sculley/terraform-kubernetes-nfs-client-provisioner"
 
   namespace        = "nfs_client_provisioner"
   create_namespace = true
