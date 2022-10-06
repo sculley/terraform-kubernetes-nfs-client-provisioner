@@ -8,10 +8,12 @@ resource "helm_release" "nfs_client_provisioner" {
   create_namespace = var.create_namespace
 
   values = [
-    templatefile("${path.module}/values.yaml.tpl", {
+    templatefile("${path.module}/templates/helm/values.yaml.tpl", {
       replica_count    = var.replica_count
       nfs_server       = var.nfs_server
       nfs_server_path  = var.nfs_server_path
-    })
+      nfs_mount_options = var.nfs_mount_options
+    }),
+    var.values
   ]
 }

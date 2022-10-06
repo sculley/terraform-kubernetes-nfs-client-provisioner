@@ -44,8 +44,18 @@ variable "nfs_server_path" {
   type        = string
 }
 
+variable "nfs_mount_options" {
+  description = "(Optional) Mount options for the NFS mount, defaults to `vers=4.1`"
+}
+
 variable "replica_count" {
   description = "(Optional) Number of replica pods to create, defaults to `1`"
   type        = number
   default     = 1
+}
+
+variable "values" {
+  description = "The Gitlab Runners helm chart values yaml"
+  type        = string
+  default     = ""
 }

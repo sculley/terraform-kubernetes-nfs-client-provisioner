@@ -10,7 +10,6 @@ imagePullSecrets: []
 nfs:
   server: ${nfs_server}
   path: ${nfs_server_path}
-  mountOptions:
   volumeName: nfs-subdir-external-provisioner-root
   # Reclaim policy for the main nfs volume
   reclaimPolicy: Retain
