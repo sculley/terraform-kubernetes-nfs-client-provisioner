@@ -55,7 +55,7 @@ variable "replica_count" {
 }
 
 variable "values" {
-  description = "The Gitlab Runners helm chart values yaml"
+  description = "(Optional) The nfs-client-provisioner helm chart values yaml"
   type        = string
   default     = ""
 }
