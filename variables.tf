@@ -1,7 +1,7 @@
 variable "create_namespace" {
   description = "(Optional) Create namespace, defaults to `false`"
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "helm_chart_name" {
@@ -46,6 +46,8 @@ variable "nfs_server_path" {
 
 variable "nfs_mount_options" {
   description = "(Optional) Mount options for the NFS mount, defaults to `vers=4.1`"
+  type = list(string)
+  default = null
 }
 
 variable "replica_count" {
