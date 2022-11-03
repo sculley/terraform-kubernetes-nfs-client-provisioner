@@ -1,7 +1,7 @@
 variable "create_namespace" {
   description = "(Optional) Create namespace, defaults to `false`"
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "helm_chart_name" {
@@ -44,8 +44,20 @@ variable "nfs_server_path" {
   type        = string
 }
 
+variable "nfs_mount_options" {
+  description = "(Optional) Mount options for the NFS mount, defaults to `vers=4.1`"
+  type = list(string)
+  default = null
+}
+
 variable "replica_count" {
   description = "(Optional) Number of replica pods to create, defaults to `1`"
   type        = number
   default     = 1
+}
+
+variable "values" {
+  description = "(Optional) The nfs-client-provisioner helm chart values yaml"
+  type        = string
+  default     = ""
 }
